@@ -13,6 +13,7 @@
 		B193779B28159A350075B063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B193779928159A350075B063 /* Main.storyboard */; };
 		B193779D28159A360075B063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B193779C28159A360075B063 /* Assets.xcassets */; };
 		B19377A028159A360075B063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B193779E28159A360075B063 /* LaunchScreen.storyboard */; };
+		B19377A8281714420075B063 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = B19377A7281714420075B063 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B193779C28159A360075B063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B193779F28159A360075B063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19377A128159A360075B063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B19377A7281714420075B063 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B193779928159A350075B063 /* Main.storyboard */,
 				B193779C28159A360075B063 /* Assets.xcassets */,
 				B193779E28159A360075B063 /* LaunchScreen.storyboard */,
+				B19377A7281714420075B063 /* start.txt */,
 				B19377A128159A360075B063 /* Info.plist */,
 			);
 			path = "100DaySwift HomeWork5";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19377A028159A360075B063 /* LaunchScreen.storyboard in Resources */,
+				B19377A8281714420075B063 /* start.txt in Resources */,
 				B193779D28159A360075B063 /* Assets.xcassets in Resources */,
 				B193779B28159A350075B063 /* Main.storyboard in Resources */,
 			);
