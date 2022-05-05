@@ -34,7 +34,6 @@ class TableController: UITableViewController {
         tableView.reloadData()
     }
     
-    
     @objc func promptForAnswer() {
         let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
         ac.addTextField()
@@ -94,10 +93,17 @@ class TableController: UITableViewController {
     }
 
     func isReal(word: String) -> Bool {
+        if word.count < 3 || word == title {
+            let vc = UIAlertController(title: "Error", message: "Error variant word", preferredStyle: .alert)
+            vc.addAction(.init(title: "Cancel", style: .cancel))
+            present(vc, animated: true)
+                    return false
+        }
+        
         let checker = UITextChecker()
             let range = NSRange(location: 0, length: word.utf16.count)
             let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-
+        
         if misspelledRange.location == NSNotFound {
             return true
         } else {
