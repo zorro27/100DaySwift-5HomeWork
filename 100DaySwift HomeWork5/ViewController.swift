@@ -11,12 +11,15 @@ class TableController: UITableViewController {
 
     var allWords = [String]()
     var usedWords = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWords()
         start()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(start))
     }
+    
     func loadWords() {
         if let startWordURL = Bundle.main.url(forResource: "start", withExtension: "txt"){
             if let startWords = try? String(contentsOf: startWordURL){
@@ -28,7 +31,7 @@ class TableController: UITableViewController {
         }
     }
     
-    func start() {
+    @objc func start() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
@@ -55,7 +58,7 @@ class TableController: UITableViewController {
         if isPossible(word: lowerAnswer) {
                 if isOriginal(word: lowerAnswer) {
                     if isReal(word: lowerAnswer) {
-                        usedWords.insert(answer, at: 0)
+                        usedWords.insert(lowerAnswer, at: 0)
 
                         let indexPath = IndexPath(row: 0, section: 0)
                         tableView.insertRows(at: [indexPath], with: .automatic)
